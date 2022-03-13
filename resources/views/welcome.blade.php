@@ -820,7 +820,7 @@
                 <div>
                     <a href="{{ route('home') }}" style="float: left;  ">
                         <img src="{{ url('/image/logo.png') }}" class="img-responsive"
-                            alt="kalerhaat" title="kalerhaat" style="width: 140px;">
+                            alt="carebaz" title="carebaz" style="width: 140px;">
                     </a>
                 </div>
                 <!--                    <a href="#"data-toggle="modal" data-target="#mySms"   style="float: right;padding-right: 20px;">
@@ -1052,7 +1052,7 @@
     <!--work-->
     <script>
         function ProductAddTwoCart(Obj) {
-            serverPage = 'http://www.kalerhaat.com/cart/ajax_addcart/' + Obj;
+            serverPage = '#' + Obj;
             xmlhttp.open("GET", serverPage);
             xmlhttp.onreadystatechange = function() {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -1087,7 +1087,7 @@
         function IncrementFunction(Obj, rowid) {
             var x = document.getElementById(Obj).value;
             var quantity = Number(x) + 1;
-            serverPage = 'http://www.kalerhaat.com/cart/ajax_update_cart_front/' + rowid + '/' + quantity;
+            serverPage = '#' + rowid + '/' + quantity;
             xmlhttp.open("GET", serverPage);
             xmlhttp.onreadystatechange = function() {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -1109,7 +1109,7 @@
             if (quantity >= 1) {
                 document.getElementById(Obj).innerHTML = quantity;
 
-                serverPage = 'http://www.kalerhaat.com/cart/ajax_update_cart_front/' + rowid + '/' + quantity;
+                serverPage = '#' + rowid + '/' + quantity;
                 xmlhttp.open("GET", serverPage);
                 xmlhttp.onreadystatechange = function() {
                     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -1128,7 +1128,7 @@
     <script>
         function ProductAddDetails() {
             //        alert(Obj);
-            serverPage = 'http://www.kalerhaat.com/cart/ajax_cart_show_front/';
+            serverPage = '#';
             xmlhttp.open("GET", serverPage);
             xmlhttp.onreadystatechange = function() {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -1143,7 +1143,7 @@
     <script>
         function CartDataRemove(Obj) {
 
-            serverPage = 'http://www.kalerhaat.com/cart/ajax_cart_remove_product_front/' + Obj;
+            serverPage = '#' + Obj;
             xmlhttp.open("GET", serverPage);
             xmlhttp.onreadystatechange = function() {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -1159,7 +1159,7 @@
 
         function ProductRemoveDetails() {
             //        alert(Obj);
-            serverPage = 'http://www.kalerhaat.com/cart/ajax_remove_cart/';
+            serverPage = '#';
             xmlhttp.open("GET", serverPage);
             xmlhttp.onreadystatechange = function() {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -1228,9 +1228,9 @@
         function SearchProduct_byUser(Obj) {
             search_cat = document.getElementById("search_cat").value;
             if (search_cat > 0) {
-                serverPage = 'http://www.kalerhaat.com/ovation/SearchProductUser_multi/' + Obj + '/' + search_cat;
+                serverPage = '#' + Obj + '/' + search_cat;
             } else {
-                serverPage = 'http://www.kalerhaat.com/ovation/SearchProductUser/' + Obj;
+                serverPage = '#' + Obj;
             }
             xmlhttp.open("POST", serverPage);
             xmlhttp.onreadystatechange = function() {
@@ -1281,7 +1281,7 @@
 
         if (url) {
             x = 0;
-            serverPage = 'http://www.kalerhaat.com/ovation/website_couter/' + x;
+            serverPage = '#' + x;
 
             xmlhttp.open("GET", serverPage);
             xmlhttp.onreadystatechange = function() {
@@ -1293,7 +1293,7 @@
     </script>
 
 
-    <script src="http://www.kalerhaat.com/front_asset/js/bootstrap.min.js"></script>
+    <script src="{{ url('/js/bootstrap.min.js') }}"></script>
 
 
 </body>
