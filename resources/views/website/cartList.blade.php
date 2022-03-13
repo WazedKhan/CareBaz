@@ -277,7 +277,7 @@ var quantity = Number(x) - 1;
 if (quantity >= 1) {
     document.getElementById(Obj).innerHTML = quantity;
 
-    serverPage = 'http://www.kalerhaat.com/cart/ajax_update_cart/' + rowid + '/' + quantity;
+    serverPage = '#' + rowid + '/' + quantity;
     xmlhttp.open("GET", serverPage);
     xmlhttp.onreadystatechange = function ()
     {
@@ -297,7 +297,7 @@ if (quantity >= 1) {
 function cartStatus()
 {
 
-serverPage = 'http://www.kalerhaat.com/cart/cart_status/';
+serverPage = '';
 xmlhttp.open("GET", serverPage);
 xmlhttp.onreadystatechange = function ()
 {
