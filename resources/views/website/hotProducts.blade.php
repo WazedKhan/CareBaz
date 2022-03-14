@@ -94,7 +94,7 @@ Home /
 
 
 </div>
-<script src="http://www.kalerhaat.com/slider-asset/js/jquery.min.js"></script>
+{{-- <script src="http://www.#.com/slider-asset/js/jquery.min.js"></script> --}}
 
 
 <br><br><br><br>
