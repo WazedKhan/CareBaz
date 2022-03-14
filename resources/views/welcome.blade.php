@@ -774,7 +774,7 @@
             <li style="margin-left: 10px;"><a href="{{ route('home') }}"><span
                 <i class="fas fa-home"></i></span> Home</a></li>
 
-            <li><a href="#"><i class="fas fa-envelope"></i></span> Contact</a></li>
+            <li><a href="{{ route('contact') }}"><i class="fas fa-envelope"></i></span> Contact</a></li>
 
             <li><a href="{{ route('track') }}"><i class="fas fa-truck"></i></span> Track Order</a></li>
 

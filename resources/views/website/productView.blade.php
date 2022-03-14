@@ -41,7 +41,7 @@
     <!--content area start-->
 
     <section class="best_seller_product" style="background-color: #fff;padding-bottom: 10px;padding-top:0" id="main_content_area">
-        <meta property="og:url" content="http://www.kalerhaat.com/product/maka-makia/1595">
+        <meta property="og:url" content="#">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Acne Scar Removal Treatment Cream">
 <meta property="og:description" content="কাটা দাগ দূর করবে! 
@@ -63,7 +63,7 @@ Weight: 30 gm
 তার পর আক্রান্ত জায়গা আলতো ভাবে লাগিয়ে দিন
 দিনে ২ বার ব্যবহার করতে হবে
 ভালো ফলাফলের জন্য ক্রিমটি ১ মাস ব্যবহার করা উত্তম">
-<meta property="og:image" content="http://www.kalerhaat.com/image/product_image/PicsArt_12-24-03.15_.13_.jpg">
+<meta property="og:image" content="">
 <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
 <script>(function(d, s, id) {
 var js, fjs = d.getElementsByTagName(s)[0];
@@ -218,7 +218,7 @@ form.reviewform .srating>label:hover ~ input:checked ~ label,
 form.reviewform .srating>input:checked ~ label:hover ~ label{color:#FFED85;} 
 
 
-.rating span{position:absolute;left:0;top:0;height:18px;background:url(http://www.kalerhaat.com/images/stars.png) 0 -18px repeat-x;}
+.rating span{position:absolute;left:0;top:0;height:18px;background:url() 0 -18px repeat-x;}
 .rating-overall>div{margin:4px 0 5px;color:#444;font-size:13px;font-weight:600px;}
 .rating-overall .track{position:relative;display:inline-block;margin:0 8px;width:120px;height:13px;background:#ddd;vertical-align:middle;}
 .rating-overall .track.one-star{margin-left:15px;}
@@ -250,7 +250,7 @@ position: relative;
 display: inline-block;
 width: 90px;
 height: 17px;
-background: url(http://www.kalerhaat.com/images/stars.png) 0 0 repeat-x;
+background: 
 float: left;
 }
 .review-right .rating-overall-desc {
@@ -407,8 +407,8 @@ margin-top: 0  !important;
 }
 }
 </style>
-<link rel="stylesheet" href="http://www.kalerhaat.com/slider-asset/css/owl.carousel.min.css"> 
-<link rel="stylesheet" href="http://www.kalerhaat.com/slider-asset/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="{{ url('/css/owl.carousel.min.css') }}"> 
+{{-- <link rel="stylesheet" href="{{ url('/css/owl.theme.default.min.css') }}">  --}}
 <div class="row area-mobile-off" role="navigation" style="height: auto;top: 0;box-shadow: none;background: #000;margin-right: 0;margin-top: -1px;">
     <div class="container">
     
@@ -595,10 +595,9 @@ Home /
                                             </h4>
                                             
                                             <!-- Your share button code -->
-              <div style="margin-bottom:  10px;margin-top:  0;margin-left: 0;display: inline-block;" class="fb-share-button fb_iframe_widget" data-href="{{ route('products.details',$product->id) }}" data-layout="button" data-size="large" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;href=http%3A%2F%2Fwww.kalerhaat.com%2Fproduct%2Fmaka-makia%2F1595&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;size=large"><span style="vertical-align: bottom; width: 77px; height: 28px;"><iframe name="f27783afa1846cc" width="1000px" height="1000px" data-testid="fb:share_button Facebook Social Plugin" title="fb:share_button Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v3.0/plugins/share_button.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2e06e87e0c5204%26domain%3Dwww.kalerhaat.com%26is_canvas%3Dfalse%26origin%3Dhttp%253A%252F%252Fwww.kalerhaat.com%252Ff1fb0178e734af8%26relation%3Dparent.parent&amp;container_width=0&amp;href=http%3A%2F%2Fwww.kalerhaat.com%2Fproduct%2Fmaka-makia%2F1595&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;size=large" style="border: none; visibility: visible; width: 77px; height: 28px;" class=""></iframe></span></div>
                                             
                                             <a href="tel:{{ $info->number_1 }}" target="_blank" rel="nofollow" data-tooltip="" data-placement="bottom" title="">
-                                <img style="margin-bottom:  10px;margin-top:  0;margin-left: 0;" src="http://www.kalerhaat.com/images/call-button.png">
+                                <img style="margin-bottom:  10px;margin-top:  0;margin-left: 0;" src="{{ url('/image/call-button.png') }}">
                             </a>
                                         </div>
 
@@ -844,7 +843,7 @@ Home /
 function SeeMoreProducts(category_id)
 {
     document.getElementById("BtnSeeMore").innerHTML = 'Please Wait';
-    serverPage = 'http://www.kalerhaat.com/ovation/more_new_related_products/' + category_id;
+    serverPage = '#' + category_id;
     xmlhttp.open("GET", serverPage);
     xmlhttp.onreadystatechange = function ()
     {
@@ -869,8 +868,8 @@ function SeeMoreProducts(category_id)
 
 
 
-<script src="http://www.kalerhaat.com/slider-asset/js/jquery.min.js"></script>
-<script src="http://www.kalerhaat.com/slider-asset/js/owl.carousel.min2.js"></script>
+<script src="{{ url('/js/slider-asset/jquery.min.js') }}"></script>
+<script src="{{ url('/js/slider-asset/owl.carousel.min2.js') }}"></script>
 
 <script>
 
@@ -962,7 +961,7 @@ function DecrementFunction22(Obj) {
 
 function ProductAddTwoCart(Obj)
 { 
-    serverPage = 'http://www.kalerhaat.com/cart/ajax_addcart/' + Obj;
+    serverPage = '#' + Obj;
     xmlhttp.open("GET", serverPage);
     xmlhttp.onreadystatechange = function ()
     {
@@ -998,7 +997,7 @@ function ProductAddTwoCart(Obj)
         function IncrementFunction(Obj,rowid) {  
             var x = document.getElementById(Obj).value;  
             var quantity = Number(x) + 1; 
-            serverPage = 'http://www.kalerhaat.com/cart/ajax_update_cart_front/' + rowid + '/' + quantity;
+            serverPage = '#' + rowid + '/' + quantity;
             xmlhttp.open("GET", serverPage);
             xmlhttp.onreadystatechange = function ()
             {
@@ -1021,7 +1020,7 @@ function ProductAddTwoCart(Obj)
             if(quantity >= 1){
                  document.getElementById(Obj).innerHTML = quantity;
                  
-                  serverPage = 'http://www.kalerhaat.com/cart/ajax_update_cart_front/' + rowid + '/' + quantity;
+                  serverPage = '#' + rowid + '/' + quantity;
             xmlhttp.open("GET", serverPage);
             xmlhttp.onreadystatechange = function ()
             {
@@ -1045,7 +1044,7 @@ function ProductAddTwoCart(Obj)
 function ProductAddDetails()
 {
 //        alert(Obj);
-    serverPage = 'http://www.kalerhaat.com/cart/ajax_cart_show_front/';
+    serverPage = '#';
     xmlhttp.open("GET", serverPage);
     xmlhttp.onreadystatechange = function ()
     {
@@ -1064,7 +1063,7 @@ function ProductAddDetails()
 function CartDataRemove(Obj)
 {
 
-    serverPage = 'http://www.kalerhaat.com/cart/ajax_cart_remove_product_front/' + Obj;
+    serverPage = '#' + Obj;
     xmlhttp.open("GET", serverPage);
     xmlhttp.onreadystatechange = function ()
     {
@@ -1083,7 +1082,7 @@ function CartDataRemove(Obj)
 function ProductRemoveDetails()
 {
 //        alert(Obj);
-    serverPage = 'http://www.kalerhaat.com/cart/ajax_remove_cart/';
+    serverPage = '#';
     xmlhttp.open("GET", serverPage);
     xmlhttp.onreadystatechange = function ()
     {
@@ -1153,9 +1152,9 @@ widthSiz = $(window).width();
         {
         search_cat = document.getElementById("search_cat").value;
         if(search_cat > 0){
-        serverPage = 'http://www.kalerhaat.com/ovation/SearchProductUser_multi/' + Obj + '/'+ search_cat;
+        serverPage = '#' + Obj + '/'+ search_cat;
         }else{
-            serverPage = 'http://www.kalerhaat.com/ovation/SearchProductUser/' + Obj;
+            serverPage = '#' + Obj;
             }
             xmlhttp.open("POST", serverPage);
             xmlhttp.onreadystatechange = function ()
@@ -1210,7 +1209,7 @@ widthSiz = $(window).width();
 
         if (url) {
         x= 0;
-            serverPage = 'http://www.kalerhaat.com/ovation/website_couter/' + x;
+            serverPage = '#' + x;
 
             xmlhttp.open("GET", serverPage);
             xmlhttp.onreadystatechange = function ()
@@ -1224,8 +1223,6 @@ widthSiz = $(window).width();
 
     </script>
 
-
-    <script src="http://www.kalerhaat.com/front_asset/js/bootstrap.min.js"></script>
 
 
 
